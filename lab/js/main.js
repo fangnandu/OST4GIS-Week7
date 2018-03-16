@@ -125,14 +125,64 @@ of the application to report this information.
 
 ===================== */
 
-var dataset = ""
+var dataset = "https://raw.githubusercontent.com/CPLN692-MUSA611/datasets/master/geojson/philadelphia-garbage-collection-boundaries.geojson";
+
 var featureGroup;
 
 var myStyle = function(feature) {
+  switch (feature.properties.COLLDAY) {
+    case "MON": return {color: "#FF0000"};
+    case "TUE": return {color: "#F79F81"};
+    case "WED": return {color: "#D0FA58"};
+    case "THU": return {color: "#2EFE9A"};
+    case "FRI": return {color: "#2E64FE"};
+    case "SAT": return {color: "#FE2EF7"};
+    case "SUN": return {color: "#FF0040"};
+  }
   return {};
 };
 
 var showResults = function() {
+      switch(layer.feature.properties.COLLDAY){
+      case 'MON':
+        $('#results > p.main > span').text('Monday');
+        $('#results > p:nth-child(3) > span').text('Monday');
+        $('#results > h1').text('Monday');
+        break;
+      case 'TUE':
+        $('#results > p.main > span').text('Tuesday');
+        $('#results > p:nth-child(3) > span').text('Tuesday');
+        $('#results > h1').text('Tuesday');
+        break;
+      case 'WED':
+        $('#results > p.main > span').text('Wednesday');
+        $('#results > p:nth-child(3) > span').text('Wednesday');
+        $('#results > h1').text('Wednesday');
+        break;
+      case 'THU':
+        $('#results > p.main > span').text('Thursday');
+        $('#results > p:nth-child(3) > span').text('Thursday');
+        $('#results > h1').text('Thursday');
+        break;
+      case 'FRI':
+        $('#results > p.main > span').text('Friday');
+        $('#results > p:nth-child(3) > span').text('Friday');
+        $('#results > h1').text('Friday');
+        break;
+      case 'SAT':
+        $('#results > p.main > span').text('Saturday');
+        $('#results > p:nth-child(3) > span').text('Saturday');
+        $('#results > h1').text('Saturday');
+        break;
+      case 'SUN':
+        $('#results > p.main > span').text('Sunday');
+        $('#results > p:nth-child(3) > span').text('Sunday');
+        $('#results > h1').text('Sunday');
+        break;
+    }
+    console.log(layer.feature.properties.COLLDAY);
+    showResults();
+
   /* =====================
   This function uses some jQuery methods that may be new. $(element).hide()
   will add the CSS "display: none" to the element, effectively removing it
@@ -159,8 +209,13 @@ var eachFeatureFunction = function(layer) {
 };
 
 var myFilter = function(feature) {
-  return true;
-};
+    if(feature.properties.COLLDAY!==" "){
+      return true;
+    }
+    else{
+      return false;
+    }
+    };
 
 $(document).ready(function() {
   $.ajax(dataset).done(function(data) {

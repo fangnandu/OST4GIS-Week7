@@ -32,3 +32,125 @@ p.main {
   background-color: #fff;
   z-index: 2000;
 }
+
+
+.legend {
+  position: absolute;
+  background-color: #fff;
+  z-index: 2000;
+  left: 450px;
+  top:15px;
+}
+
+.legendText {
+  position: absolute;
+  background-color: rgba(244, 66, 66, 0);
+  z-index: 2000;
+  left: 500px;
+  top:15px;
+}
+#MON {
+  width:40px;
+  height:20px;
+  background-color: rgba(244, 66, 66, 0.6);
+  border: 4px solid #f44242;
+  left: 460px;
+  top: 0px;
+}
+
+#MONtext {
+  width:60px;
+  height:20px;
+  left: 540px;
+  top: 0px;
+}
+
+#TUE {
+  width:40px;
+  height:20px;
+  background-color: rgba(244, 113, 65, 0.6);
+  border: 4px solid #f47141;
+  left: 460px;
+  top: 30px;
+}
+#TUEtext {
+  width:60px;
+  height:20px;
+  left: 540px;
+  top: 0px;
+}
+
+#WED {
+  width:40px;
+  height:20px;
+  background-color: rgba(244, 163, 65, 0.6);
+  border: 4px solid #f4a341;
+  left: 460px;
+  top: 60px;
+}
+#WEDtext {
+  width:60px;
+  height:20px;
+  left: 540px;
+  top: 0px;
+}
+
+#THU {
+  width:40px;
+  height:20px;
+  background-color: rgba(244, 205, 65, 0.6);
+  border: 4px solid #f4cd41;
+  left: 460px;
+  top: 90px;
+}
+#THUtext {
+  width:60px;
+  height:20px;
+  left: 540px;
+  top: 0px;
+}
+
+#FRI {
+  width:40px;
+  height:20px;
+  background-color: rgba(235, 244, 65, 0.6);
+  border: 4px solid #ebf441;
+  left: 460px;
+  top: 120px;
+}
+#FRItext {
+  width:60px;
+  height:20px;
+  left: 540px;
+  top: 0px;
+}
+
+#SAT {
+  width:40px;
+  height:20px;
+  background-color: rgba(205, 244, 65, 0.6);
+  border: 4px solid #cdf441;
+  left: 460px;
+  top: 150px;
+}
+#SATtext {
+  width:60px;
+  height:20px;
+  left: 540px;
+  top: 0px;
+}
+
+#SUN {
+  width:40px;
+  height:20px;
+  background-color: rgba(181, 244, 65, 0.6);
+  border: 4px solid #b5f441;
+  left: 460px;
+  top: 180px;
+}
+#SUNtext {
+  width:60px;
+  height:20px;
+  left: 540px;
+  top: 0px;
+}
